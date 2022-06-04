@@ -1,0 +1,17 @@
+.headerContainer {
+  height: 3.25rem;
+  background-color: #27272a;
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 5rem;
+
+  display: inline;
+  align-items: left;
+}
+
+a {
+  height: 50px;
+  width: 50px;
+}

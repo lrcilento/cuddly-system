@@ -1,11 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button, Card, Col, Form, Row } from "react-bootstrap";
+import { Page } from "./components/Page";
 
-function App() {
-    return (
-        <div></div>
-    );
+export function App() {
+  return <Page />
 }
-
-export default App;
