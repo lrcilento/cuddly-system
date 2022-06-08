@@ -1,3 +1,18 @@
 body {
   background-color: #1b1b18;
 }
+
+button {
+  cursor: pointer;
+}
+
+body, input, textarea, button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
