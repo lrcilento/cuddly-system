@@ -6,10 +6,10 @@ import '../public/page.css'
 
 export function Page() {
   return(
-    <>
+    <div className="PageContainer">
     <Header />
     <Summary />
     <Dashboard />
-    </>
+    </div>
   )
 }

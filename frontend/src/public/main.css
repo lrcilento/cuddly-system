@@ -16,3 +16,9 @@ body, input, textarea, button {
   padding: 0;
   box-sizing: border-box;
 }
+
+.Container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}

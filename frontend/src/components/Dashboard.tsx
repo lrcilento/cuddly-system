@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import '../public/dashboard.css';
 
 interface album {
   id: number;
@@ -23,13 +24,35 @@ export function Dashboard() {
 
   const renderAlbums = () => {
     const listAlbums = []
-    for(let i = 0; i < albums.length; i++) {
+    for (let i = 0; i < albums.length; i++) {
       listAlbums.push(
-        <p>
-        { albums[i].bandName }
-        { albums[i].albumName }
-        { albums[i].releaseYear }
-        </p>
+
+        <div className='Container'>
+          <table>
+            <thead>
+              <tr>
+                <th>Banda</th>
+                <th>Album</th>
+                <th>Ano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr key={albums[i].id}>
+                <td>{albums[i].bandName}</td>
+                <td>{albums[i].albumName}</td>
+                <td>{albums[i].releaseYear}</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+        // <p>
+        // { albums[i].bandName }
+        // { albums[i].albumName }
+        // { albums[i].releaseYear }
+        // </p>
       )
     }
     return listAlbums
@@ -39,18 +62,18 @@ export function Dashboard() {
     console.log("a")
     fetch("http://localhost:8000/albums/", {
       method: "GET",
-      headers: {"Content-Type": "application/json"}
+      headers: { "Content-Type": "application/json" }
     })
-    .then(response => response.json())
-    .then(result => {
-      for(let i = 0; i < result.results.length; i++) {
-        setAlbums(albums => [...albums, result.results[i]])
-      }
-    })
-    .catch(error => console.log(error))
+      .then(response => response.json())
+      .then(result => {
+        for (let i = 0; i < result.results.length; i++) {
+          setAlbums(albums => [...albums, result.results[i]])
+        }
+      })
+      .catch(error => console.log(error))
   }
 
-  return(
+  return (
     <div>
       {
         renderAlbums()
