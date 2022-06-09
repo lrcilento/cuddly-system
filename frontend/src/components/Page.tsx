@@ -5,11 +5,9 @@ import '../public/page.css'
 
 
 export function Page() {
-  return(
+  return (
     <div className="PageContainer">
-    <Header />
-    <Summary />
-    <Dashboard />
+      <Dashboard />
     </div>
   )
 }
